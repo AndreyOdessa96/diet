@@ -41,6 +41,8 @@ tasks.register<Test>("functionalTest") {
     classpath = sourceSets["functionalTest"].runtimeClasspath
     shouldRunAfter("test")
     useJUnitPlatform()
+    systemProperty("user.language", "en")
+    systemProperty("user.country", "US")
 }
 
 tasks.named("check") {
