@@ -58,7 +58,7 @@ public class CaloriesControllerTest {
     }
 
 
-    /*@Test
+    @Test
     void getCaloriesFailsWithHeightValidation() {
         String url = "http://localhost:%s/calories?weight=70&height=49&age=30&activity=MINIMAL&sex=MALE"
                 .formatted(port);
@@ -96,5 +96,5 @@ public class CaloriesControllerTest {
         assertNotNull(body);
         assertEquals("INVALID_PARAMS", body.get("errorCode"));
         assertEquals("must be greater than or equal to 10", body.get("message"));
-    }*/
+    }
 }
