@@ -77,6 +77,7 @@ public class CaloriesControllerTest {
         assertEquals("INVALID_PARAMS", body.get("errorCode"));
         assertEquals("must be greater than or equal to 130", body.get("message"));
     }
+
     @Test
     void getCaloriesFailsWithAgeValidation() {
         String url = "http://localhost:%s/calories?weight=70&height=175&age=9&activity=MINIMAL&sex=MALE"
