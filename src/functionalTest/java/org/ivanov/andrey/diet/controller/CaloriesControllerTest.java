@@ -13,10 +13,8 @@ import org.springframework.test.annotation.DirtiesContext;
 
 import java.util.Map;
 
-import static org.hibernate.validator.internal.util.Contracts.assertNotNull;
-import static org.ivanov.andrey.diet.domain.calories.Activity.MINIMAL;
-import static org.ivanov.andrey.diet.domain.calories.Sex.MALE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)

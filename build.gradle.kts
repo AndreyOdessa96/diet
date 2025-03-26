@@ -1,8 +1,9 @@
 plugins {
     id("java")
     id("org.springframework.boot") version "3.4.3"
-    id("io.spring.dependency-management") version "1.1.4"
 }
+
+apply(plugin = "io.spring.dependency-management")
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
@@ -18,15 +19,14 @@ sourceSets {
     }
 }
 
-val functionalTestImplementation by configurations.getting {
+val functionalTestImplementation: Configuration by configurations.getting {
     extendsFrom(configurations["implementation"])
 }
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.hibernate:hibernate-validator:8.0.2.Final")
-    implementation("javax.inject:javax.inject:1")
+    implementation("org.hibernate.validator:hibernate-validator")
 
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
