@@ -25,9 +25,9 @@ public class CaloriesController {
 
     @GetMapping
     public CaloriesResponse getCalories(
-            @RequestParam @Min(20)@Max(200) BigDecimal weight,
-            @RequestParam @Min(130)@Max(230) Integer height,
-            @RequestParam @Min(10)@Max(100) Integer age,
+            @RequestParam @Min(20) @Max(200) BigDecimal weight,
+            @RequestParam @Min(130) @Max(230) Integer height,
+            @RequestParam @Min(10) @Max(100) Integer age,
             @RequestParam Activity activity,
             @RequestParam Sex sex) {
 
