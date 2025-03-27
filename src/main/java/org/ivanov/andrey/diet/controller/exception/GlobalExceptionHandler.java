@@ -1,4 +1,4 @@
-package org.ivanov.andrey.diet;
+package org.ivanov.andrey.diet.controller.exception;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.ivanov.andrey.diet.ErrorCode.INTERNAL_ERROR;
-import static org.ivanov.andrey.diet.ErrorCode.INVALID_PARAMS;
+import static org.ivanov.andrey.diet.controller.exception.ErrorCode.INTERNAL_ERROR;
+import static org.ivanov.andrey.diet.controller.exception.ErrorCode.INVALID_PARAMS;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 

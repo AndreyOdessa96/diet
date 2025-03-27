@@ -31,8 +31,10 @@ public class CaloriesController {
     public CaloriesResponse getCalories(
             @RequestParam @Range(min = 20, max = 200, message = "{app.calories.weight.range.message}")
             BigDecimal weight,
-            @RequestParam @Min(130) @Max(230) Integer height,
-            @RequestParam @Min(10) @Max(100) Integer age,
+            @RequestParam @Range(min = 130, max = 230, message = "{app.calories.height.range.message}")
+            Integer height,
+            @RequestParam @Range(min = 10, max = 100, message = "{app.calories.age.range.message}")
+            Integer age,
             @RequestParam Activity activity,
             @RequestParam Sex sex) {
 

@@ -44,7 +44,7 @@ public class CaloriesControllerTest {
 
         assertEquals(BAD_REQUEST, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertTrue(response.getBody().contains("\"errorCode\":\"INVALID_PARAMS\""));
+        assertEquals("{\"errorCode\":\"INVALID_PARAMS\",\"message\":\"weight must be between 20 and 200\"}", response.getBody());
     }
 
 
@@ -62,7 +62,7 @@ public class CaloriesControllerTest {
 
         assertEquals(BAD_REQUEST, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertTrue(response.getBody().contains("\"errorCode\":\"INVALID_PARAMS\""));
+        assertEquals("{\"errorCode\":\"INVALID_PARAMS\",\"message\":\"height must be between 130 and 230\"}", response.getBody());
     }
 
     @Test
@@ -79,6 +79,6 @@ public class CaloriesControllerTest {
 
         assertEquals(BAD_REQUEST, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertTrue(response.getBody().contains("\"errorCode\":\"INVALID_PARAMS\""));
+        assertEquals("{\"errorCode\":\"INVALID_PARAMS\",\"message\":\"age must be between 10 and 100\"}", response.getBody());
     }
 }

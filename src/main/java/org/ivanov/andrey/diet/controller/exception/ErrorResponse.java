@@ -1,4 +1,4 @@
-package org.ivanov.andrey.diet;
+package org.ivanov.andrey.diet.controller.exception;
 
 public record ErrorResponse (
     ErrorCode errorCode,
