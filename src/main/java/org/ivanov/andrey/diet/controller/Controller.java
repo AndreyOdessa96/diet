@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController // Указывает, что это REST-контроллер
-@RequestMapping("/calories") // Базовый URL для запросов
+@RestController
+@RequestMapping("/calories")
 public class Controller {
 
-    @GetMapping("/hello") // Обрабатывает GET-запрос на /api/hello
+    @GetMapping("/hello")
     public String sayHello(@RequestParam String name) {
         return "Привет, %s  Spring Boot!".formatted(name);
     }
